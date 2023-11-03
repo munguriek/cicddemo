@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Pull image from Docker
       run: docker pull munguriek/nodeapp:latest
-    - name: Delete old docker container
+    - name: Delete old  container
       run: docker rm -f nodeapp || true
     - name: Run latest docker container
       run: docker run -d -p 8000:3000 --name nodeapp munguriek/nodeapp
